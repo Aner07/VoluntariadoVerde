@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
 :root {
     --bg: #f4f4f0;
     --surface: #e5f4e7;
@@ -5,17 +6,17 @@
     --text: #000000;
     --fondo: #FFFFFF;
     --accent1: #d48a0a;
-    --accent3: #00fc22;
-    --accent5: #1a9a6e;
-    --titulo: #005700;
+    --accent3: #1b6844;
+    --accent5: #000000;
+    --titulo: #005900ff;
   }
 
-  * { margin: 0; padding: 0; box-sizing: border-box; }
+  * { margin: 0; padding: 0; box-sizing: border-box; 
+   font-family:'Hanken Grotesk', sans-serif;}
 
   body {
     background: var(--fondo);
     color: var(--text);
-    font-family: 'Syne', sans-serif;
     min-height: 100vh;
     overflow-x: hidden;
   }
@@ -30,13 +31,22 @@
   }
 
   header {
-    padding: 4rem 0 2.5rem;
-    text-align: center;
-  }
+  padding: 2rem 0 1.5rem;
+  text-align: center;
+
+
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)),
+    url("../img/bosque.jpg");
+
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+}
+  
 
   .header-tag {
     display: inline-block;
-    font-family: 'DM Mono', monospace;
     font-size: 0.65rem;
     letter-spacing: 0.2em;
     text-transform: uppercase;
@@ -45,29 +55,21 @@
     padding: 0.3rem 0.8rem;
     margin-bottom: 1.5rem;
     opacity: 0;
-    animation: fadeUp 0.5s 0.1s forwards;
   }
 
   h1 {
-    font-size: clamp(2.2rem, 5vw, 3.8rem);
-    font-weight: 800;
-    letter-spacing: -0.03em;
+    font-size: clamp(2.2rem, 5vw, 5.4rem);
+    font-weight: 5;
+    letter-spacing: 0.07em;
     line-height: 1.05;
-    opacity: 0;
-    animation: fadeUp 0.6s 0.2s forwards;
-    color: var(--titulo);
-  }
+    color: var(--bg);
 
-  h1 span {
-    color: var(--titulo);
   }
 
   .subtitle {
     margin-top: 0.8rem;
-    color: var(--text);
+    color: var(--bg);
     font-size: 1.2rem;
-    opacity: 0;
-    animation: fadeUp 0.6s 0.3s forwards;
   }
 
   .category {
@@ -80,7 +82,6 @@
   }
 
   .category-label {
-    font-family: 'DM Mono', monospace;
     font-size: 0.62rem;
     letter-spacing: 0.25em;
     text-transform: uppercase;
@@ -112,10 +113,10 @@
     overflow: hidden;
     transition: background 0.2s;
     opacity: 0;
-    animation: fadeIn 0.5s forwards;
   }
 
-  .card:hover { background: var(--surface); }
+  .card:hover { background: var(--surface); 
+  }
 
   .card-header {
     display: flex;
@@ -131,7 +132,6 @@
   }
 
   .card-badge {
-    font-family: 'DM Mono', monospace;
     font-size: 0.58rem;
     padding: 0.2rem 0.5rem;
     font-weight: 500;
@@ -158,7 +158,6 @@
   }
 
   .tag {
-    font-family: 'DM Mono', monospace;
     font-size: 0.58rem;
     padding: 0.18rem 0.45rem;
     border: 1px solid var(--border);
@@ -175,13 +174,13 @@
   .card-url {
     display: block;
     margin-top: 0.9rem;
-    font-family: 'DM Mono', monospace;
-    font-size: 0.62rem;
+    font-size: 0.85rem;
     color: var(--accent-color, var(--accent3));
     text-decoration: none;
     opacity: 0;
     transform: translateY(4px);
     transition: opacity 0.2s, transform 0.2s;
+    text-align: center;
   }
 
   .card:hover .card-url { opacity: 1; transform: translateY(0); }
