@@ -29,13 +29,14 @@
       <div class="card-header">
         <span class="card-name">Animate.css</span>
         <span class="card-badge badge-util">Animación</span>
+        <button class="toggle-btn" onclick="toggleGaleria(this)">▼</button>
       </div>
       <p class="card-desc">Animate.css sirve para añadir animaciones simples (como aparecer, moverse o rebotar) a los elementos de la página usando solo clases, sin tener que programarlas tú desde cero.</p>
       <div class="card-tags">
         
       </div>
       <hr>
-      <div id="galeria"><img src="img/perfil.png" width="200" height="150">
+      <div class="galeria content-hidden"><img src="img/perfil.png" width="200" height="150">
       <img src="img/home.png" width="450" height="150"></div>
       <a class="card-url" href="https://animate.style" target="_blank">Animate.css</a>
     </div>
@@ -76,13 +77,14 @@
       <div class="card-header">
         <span class="card-name">Bootstrap</span>
                 <span class="card-badge badge-util">Utilidad</span>
+                <button class="toggle-btn" onclick="toggleGaleria(this)">▼</button>
 
       </div>
       <p class="card-desc">Bootstrap sirve para crear páginas web y adaptables a móvil rápidamente usando estilos y componentes ya preparados.</p>
       <div class="card-tags">
       </div>
       <hr>
-      <div id="galeria2"><video src="img/Voluntariado.mp4" width="640" height="360" autoplay loop muted></video>
+      <div class="galeria2 content-hidden"><video src="img/Voluntariado.mp4" width="640" height="360" autoplay loop muted></video>
         <img src="img/boostrap.png" width="720" height="160"></div>
       <a class="card-url" href="https://getbootstrap.com/" target="_blank">Bootstrap</a>
     </div>
@@ -90,5 +92,17 @@
   </div>
 
 </div>
+
+<script>
+  function toggleGaleria(btn) {
+      const card = btn.closest('.card');
+      const galeria = card.querySelector('.galeria, .galeria2');
+      
+      if (galeria) {
+          galeria.classList.toggle('content-show');
+          btn.classList.toggle('active');
+      }
+  }
+</script>
 </body>
 </html>
